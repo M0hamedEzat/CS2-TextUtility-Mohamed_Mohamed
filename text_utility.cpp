@@ -35,7 +35,7 @@ int vowelConstantCount(string str) {
         if (lowerC == 'a' || lowerC == 'e' || lowerC == 'i' || lowerC == 'o' || lowerC == 'u') {
             count++;
         }
-    }
+    }   
     return count;
 }
 string reversal(string str) {
