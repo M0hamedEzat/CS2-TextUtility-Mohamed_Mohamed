@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ezatm/MAKE/mybuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

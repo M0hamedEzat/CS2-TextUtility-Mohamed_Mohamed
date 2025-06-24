@@ -1,0 +1,1 @@
+/ucrt64/bin/c++.exe -Wl,--enable-auto-import CMakeFiles/trial.dir/text_utility.cpp.o CMakeFiles/trial.dir/main.cpp.o -o trial.exe -Wl,--out-implib,libtrial.dll.a -Wl,--major-image-version,0,--minor-image-version,0

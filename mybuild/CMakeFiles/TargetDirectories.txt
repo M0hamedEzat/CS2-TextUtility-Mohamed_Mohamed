@@ -1,0 +1,3 @@
+/home/ezatm/MAKE/mybuild/CMakeFiles/trial.dir
+/home/ezatm/MAKE/mybuild/CMakeFiles/edit_cache.dir
+/home/ezatm/MAKE/mybuild/CMakeFiles/rebuild_cache.dir
