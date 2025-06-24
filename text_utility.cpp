@@ -1,3 +1,5 @@
+/* 
+
 #include <iostream>
 #include <string>
 
@@ -72,5 +74,72 @@ int substringCount(string str, string subStr) {
     }
     return count;
 }
+
+*/
+
 // Note: The functions assume that the input strings are valid and do not handle edge cases like null strings or empty strings.
 // Additional error handling can be added as needed.
+
+
+#include "text_utility.h"
+
+namespace TextUtility {
+    
+    // Word count function
+    int wordCount(const char* text) {
+        if (text == nullptr || *text == '\0') {
+            return 0;
+        }
+        
+        int count = 0;
+        bool inWord = false;
+        
+        for (int i = 0; text[i] != '\0'; i++) {
+            if (isalnum(text[i])) {
+                if (!inWord) {
+                    count++;
+                    inWord = true;
+                }
+            } else {
+                inWord = false;
+            }
+        }
+        
+        return count;
+    }
+// Character count function 
+    int characterCount(const char* text) {
+        if (text == nullptr) {
+            return 0;
+        }
+        
+        int count = 0;
+        while (text[count] != '\0') {
+            count++;
+        }
+        
+        return count;
+    }
+ // Function to check if character is vowel
+    bool isVowel(char c) {
+        char lower = tolower(c);
+        return (lower == 'a' || lower == 'e' || lower == 'i' || 
+                lower == 'o' || lower == 'u');
+    }
+    
+    // Vowel count function
+    int vowelCount(const char* text) {
+        if (text == nullptr) {
+            return 0;
+        }
+        
+        int count = 0;
+        for (int i = 0; text[i] != '\0'; i++) {
+            if (isVowel(text[i])) {
+                count++;
+            }
+        }
+        
+        return count;
+    }
+    
