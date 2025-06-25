@@ -27,6 +27,10 @@ namespace TextUtility {
     bool isVowel(char c);
     
     void cleanString(const char* source, char* destination);
+
+    void encrypt(char* plaintext, char* keyword, char* result);
+
+    void decrypt(char* ciphertext, char* keyword, char* result);
 }
 
 #endif // TEXT_UTILITY_H

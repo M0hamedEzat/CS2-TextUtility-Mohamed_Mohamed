@@ -181,4 +181,36 @@ namespace TextUtility {
         
         return count;
     }
+    void encrypt(char* plaintext, char* keyword, char* result) {
+        int textLen = strlen(plaintext);
+        int keyLen = strlen(keyword);
+        
+        for (int i = 0; i < textLen; i++) {
+            char p = plaintext[i];
+            char k = keyword[i % keyLen];  // Repeat keyword
+            
+            if (p >= 'a' && p <= 'z') {
+                result[i] = ((p - 'a') + (k - 'a')) % 26 + 'a';
+            } else {
+                result[i] = p;  // Keep non-letters unchanged
+            }
+        }
+        result[textLen] = '\0';
+    }
+    void decrypt(char* ciphertext, char* keyword, char* result) {
+        int textLen = strlen(ciphertext);
+        int keyLen = strlen(keyword);
+        
+        for (int i = 0; i < textLen; i++) {
+            char c = ciphertext[i];
+            char k = keyword[i % keyLen];  // Repeat keyword
+            
+            if (c >= 'a' && c <= 'z') {
+                result[i] = ((c - 'a') - (k - 'a') + 26) % 26 + 'a';
+            } else {
+                result[i] = c;  // Keep non-letters unchanged
+            }
+        }
+        result[textLen] = '\0';
+    }
 }

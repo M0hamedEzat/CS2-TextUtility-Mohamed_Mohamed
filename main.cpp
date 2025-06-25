@@ -119,6 +119,27 @@ int main() {
     
     printSeparator();
     cout << "All tests completed successfully!" << endl;
+
+    char plaintext[100];
+    char keyword[100];
+    char ciphertext[100];
+    char decrypted[100];
+    
+    // Get user input
+    cout << "Enter text to encrypt: ";
+    cin >> plaintext;
+    cout << "Enter keyword: ";
+    cin >> keyword;
+    
+    // Encrypt
+    encrypt(plaintext, keyword, ciphertext);
+    cout << "Original: " << plaintext << endl;
+    cout << "Encrypted: " << ciphertext << endl;
+    
+    // Decrypt
+    decrypt(ciphertext, keyword, decrypted);
+    cout << "Decrypted: " << decrypted << endl;
+
     
     return 0;
 }
