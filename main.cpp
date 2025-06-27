@@ -105,7 +105,6 @@ int main() {
     cout << "Substring \"" << substring3 << "\" occurs: " 
          << substringCount(mainText, substring3) << " times" << endl;
     
-    // Additional comprehensive test
     testFunction("Comprehensive Test");
     char comprehensiveTest[] = "Programming C++ 2024!";
     cout << "Test string: \"" << comprehensiveTest << "\"" << endl;
